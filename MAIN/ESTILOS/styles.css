@@ -1,0 +1,77 @@
+@import "grid.css";
+
+#idfooter {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    /*padding: 20px;*/
+    height: 75px;
+    margin-top: 0; /*10px;*/
+  }
+
+h1{
+  text-align: center;
+}
+
+/* CSS para link activo */
+.active-page {
+    color: antiquewhite;
+    font-size: 24px; /*  mas grande y de otro color */
+  }
+
+  .comentario-card {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 10px;
+    border-radius: 5px;
+  }
+  
+  .comentador-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .comentario-text {
+    font-size: 16px;
+  }
+  
+  .comentario-timestamp {
+    color: #888;
+  }
+
+.cuadro{
+    display: flex;
+    width: 100%;
+    margin: 10px;
+    padding:5px ;
+    background-color: black;
+    color: whitesmoke;
+}
+
+.cuadrito {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 5px;
+    background-color: black;
+    color: whitesmoke;
+    border: 2px;
+    border-color: aliceblue;
+}
+.boximg{
+    width: 60% ;
+    height: auto;
+}
+
+/* CSS for larger images on hover */
+.boximg:hover {
+    transform: scale(1.2); /* Increase the size by 20% on hover */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+  }
