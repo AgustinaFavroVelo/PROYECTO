@@ -1,22 +1,13 @@
-  // Obtener el URL path
-  const currentPath = window.location.pathname;
+//get all the menu items
+const menuItems = document.querySelectorAll("#navbar-link", "#navbar-brand");
 
-  // Obtener el ID del link del path
-  let linkId;
-  switch (currentPath) {
-    case '/nosotros.html':
-      linkId = 'about-link';
-      break;
-    case '/contacto.html':
-      linkId = 'contact-link';
-      break;
-    case '/sedes.html':
-      linkId = 'sedes-link';
-      break;
-    default:
-      linkId = 'home-link'; // Default to Home
-      break;
-  }
-
-  // Add a class 'active-page' to the current page's link for styling
-  document.getElementById(linkId).classList.add('active-page');
+// Add a click event listener to each menu item
+menuItems.forEach((menuItem) => {
+  menuItem.addEventListener('click', () => {
+    menuItems.forEach((item) => {
+      item.classList.remove();
+    });
+   //le agrego la clase selected
+    menuItem.classList.add('selected');
+  });
+});
