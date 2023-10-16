@@ -17,6 +17,10 @@ let header = `
       <li class="nav-item">
         <a class="nav-link" href="sedes.html">Sedes</a>
       </li>
+      <!-- Add the Dark Mode Toggle Button here -->
+      <li class="nav-item">
+        <button id="dark-mode-button">Toggle Dark Mode</button>
+      </li>
     </ul>
 </nav>
 `
@@ -24,11 +28,18 @@ let header = `
 document.getElementById("idheader").innerHTML = header
 
 let footer = `
-<a class="redsoc" href="https://www.twitter.com" target="_blank"> <img src = "Imagenes/twitter-X-Logo-Vector-01-2.jpg"> </a>
-<a class="redsoc" href="https://www.facebook.com/" target="_blank"> <img src = "Imagenes/facebook.png"></a>
-<a class="redsoc" href="https://www.instagram.com/?hl=es" target="_blank"> <img src="Imagenes/instagram.png"></a>
-<p>Derechos reservados @2023 </p>
-`
+<a class="redsoc" href="https://www.twitter.com" target="_blank">
+  <img class="twitter" src="Imagenes\twitter-X-Logo-Vector-01-2.jpg">
+</a>
+<a class="redsoc" href="https://www.facebook.com" target="_blank">
+  <img class="face" src="Imagenes\facebook.png">
+</a>
+<a class="redsoc" href="https://www.instagram.com/?hl=es" target="_blank">
+  <img class="insta" src="Imagenes\instagram.png">
+</a>
+<p>Derechos reservados @2023</p>
+`;
+
 document.getElementById("idfooter").innerHTML = footer
 
 //USO DE API PARA COMMENTS
@@ -93,24 +104,40 @@ commentCards.forEach((commentCard) => {
 });
 
 // //ACA HAGO LO DE MODO CLARO Y OSCURO
-let boton = document.getElementById ('boton-modo');
+// let boton = document.getElementById ('boton-modo');
+// let body = document.body;
+// let darkMode = localStorage.getItem ('darkMode') == 'enabled';
+
+// if (darkMode) {
+//   body.classList.add('modo-oscuro');
+//   boton.checked = true;
+// } 
+
+// boton.addEventListener('change', () => {
+//   if (boton.checked) {
+//     body.classList.add('modo-oscuro') ;
+//     localStorage.setItem ('darkMode','enabled');
+//   } else {
+//   body.classList.remove('modo-oscuro');
+//   localStorage.setItem ('darkMode','disabled');
+//   }
+// })
+
+// Obtengo button y body (elementos html)
+let darkModeButton = document.getElementById('dark-mode-button');
 let body = document.body;
-let darkMode = localStorage.getItem ('darkMode') == 'enabled';
 
-if (darkMode) {
-  body.classList.add('modo-oscuro');
-  boton.checked = true;
-} 
-
-boton.addEventListener('change', () => {
-  if (boton.checked) {
-    body.classList.add('modo-oscuro') ;
-    localStorage.setItem ('darkMode','enabled');
+// Function to toggle dark mode
+function toggleDarkMode() {
+  body.classList.toggle('modo-oscuro'); //le agrego modo oscuro al body a traves de la clase 
+  // You can also update the button text
+  if (body.classList.contains('modo-oscuro')) { 
+    darkModeButton.textContent = 'Claro'; //si es modo oscuro, cambiar a claro
   } else {
-  body.classList.remove('modo-oscuro');
-  localStorage.setItem ('darkMode','disabled');
+    darkModeButton.textContent = 'Oscuro'; //sino cambiar a modo oscuro
   }
-})
+}
 
-
+// Agrego click event listener al button
+darkModeButton.addEventListener('click', toggleDarkMode); //click -> llamo a la función 
 
