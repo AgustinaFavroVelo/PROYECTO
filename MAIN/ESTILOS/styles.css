@@ -1,6 +1,5 @@
 @import "grid.css";
 
-
 #idfooter {
     background-color: black;
     color: white;
@@ -23,7 +22,6 @@ h1{
 nav {
   background-color: #333; /* Change the background color */
   text-align: right; /* Align elements to the right */
-
   /* Set a fixed height for the navigation bar */
   height: 50px;
 }
@@ -42,14 +40,12 @@ nav {
 /* Styles para el Dark Mode Toggle Button */
 #dark-mode-button {
   background-color: #333;
-  position: right;
+  position: fixed;
   width: 100px;
   height: 30px;
-  box-shadow: inset 4px 4px 6px #cecece
-              inset -4px -4px 6px #fff;
   color: #fff;
   margin: 0px auto;
-  margin-top: 350px;
+  margin-top: -15px;
   border-radius: 25px;
   cursor: pointer;
 }
@@ -62,6 +58,7 @@ nav {
 /* aca hago el modo oscuro */
 body {
   transition: background-color 2s, color 2s;
+  font-family:  Arial, sans-serif;
 }
 
 .modo-oscuro {
@@ -74,7 +71,7 @@ body {
 .selected {
   font-weight: bold;
   color: antiquewhite;
-  font-size: 30px; /*  mas grande y de otro color */
+  font-size: 40px; /*  mas grande y de otro color */
 }
 
 .redsoc {
@@ -83,20 +80,6 @@ body {
   font-size: 30px
 }
 
-.face{
-  width: 5px;
-  height: 5px;
-}
-
-.insta{
-  width: 5px;
-  height: 5px;
-}
-
-.twitter{
-  width: 5px;
-  height: 5px;
-}
   .comentario-card {
     background-color: #f5f5f5;
     padding: 10px;

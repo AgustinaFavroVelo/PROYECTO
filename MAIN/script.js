@@ -29,13 +29,13 @@ document.getElementById("idheader").innerHTML = header
 
 let footer = `
 <a class="redsoc" href="https://www.twitter.com" target="_blank">
-  <img class="twitter" src="Imagenes\twitter-X-Logo-Vector-01-2.jpg">
+  <img class="twitter" src="/main/imagenes/Twitter-X-Logo-Vector-01-2.jpg">
 </a>
-<a class="redsoc" href="https://www.facebook.com" target="_blank">
-  <img class="face" src="Imagenes\facebook.png">
+<a class="redsoc" href="https://www.facebook.com" target="_blank"> 
+  <img class="face" src="/main/imagenes/facebook.png"> 
 </a>
 <a class="redsoc" href="https://www.instagram.com/?hl=es" target="_blank">
-  <img class="insta" src="Imagenes\instagram.png">
+  <img class="insta" src="/main/imagenes/instagram.png"> 
 </a>
 <p>Derechos reservados @2023</p>
 `;
