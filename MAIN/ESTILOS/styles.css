@@ -101,25 +101,6 @@ body {
     color: #888;
   }
 
-.cuadro{
-    display: flex;
-    width: 100%;
-    margin: 10px;
-    padding:5px ;
-    background-color: black;
-    color: whitesmoke;
-}
-
-.cuadrito {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    padding: 5px;
-    background-color: black;
-    color: whitesmoke;
-    border: 2px;
-    border-color: aliceblue;
-}
 .boximg{
     width: 60% ;
     height: auto;
@@ -129,4 +110,38 @@ body {
 .boximg:hover {
     transform: scale(1.2); /* Increase the size by 20% on hover */
     transition: transform 0.3s ease; /* Smooth transition effect */
+  }
+  
+
+  .cuadro {
+    display: grid;
+    width: 100%;
+    margin: 10px;
+    padding:5px ;
+    background-color: black;
+    color: whitesmoke;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+    grid-gap: 60px; /* Espacio entre las celdas de la cuadrícula */
+
+  }
+  
+  .cuadrito {
+    width: 140%;
+    padding: 20px;
+    margin: 10px;
+    background-color: black;
+    color: whitesmoke;
+    border: none;
+
+    
+  }
+  .cuadrito h2 {
+    font-size:20px; /* Establece el tamaño de fuente deseado para el título (ajusta según tus necesidades) */
+}
+  
+
+  @media screen and (max-width: 768px) {
+    .cuadro {
+      grid-template-columns: 1fr; /* Cambia a una sola columna */
+    }
   }
